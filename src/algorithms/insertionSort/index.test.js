@@ -25,12 +25,11 @@ describe('Insertion Sort', () => {
   })
 
   it('should return the array sorted', () => {
-    console.log(testCases.map(insertionSort))
     testCases.forEach(testCase =>
       expect(insertionSort([...testCase]))
         .toEqual(testCase.sort((a, b) => a - b))
     )
 
-    // expect(insertionSort([...testCases[0]])).toEqual(testCases[0].sort((a, b) => a - b))
+    expect(insertionSort([...testCases[0]])).toEqual(testCases[0].sort((a, b) => a - b))
   })
 })
